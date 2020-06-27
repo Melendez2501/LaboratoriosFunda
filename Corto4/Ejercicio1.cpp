@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 
 using namespace std;
 
@@ -7,10 +8,11 @@ char codificarLetra(char); //El tipo de dato que se toma como argumento es de ti
 
 int main() {
     int longitud;   //Declaramos un entero para guardar la longitud de la cadena
-    string arreglo; //Declaramos en este caso una cadena, ya que una cadena es un arreglo de caracteres indefinidos
+    char arreglo[100]; //Declaramos en este un arreglo que aceptara como maximo cien caracteres
     cout<<"Ingrese una frase: ";
-    getline(cin,arreglo);   //tomamos a traves de un getline la frase por si hay espacios en ella
-    longitud=arreglo.length();  //Obtenemos la longitud del string o arreglo de caracteres
+    cin.getline(arreglo, 100);   //tomamos a traves de un getline la frase por si hay espacios en ella y la guardamos en el arreglo y ponemos su limite
+    longitud = strlen(arreglo);  //Obtenemos la longitud de los caracteres ingresados
+    cout<<"La frase codificada es: ";
     for (int i = 0; i < longitud; i++)  //Recorremos cada caracter de la frase de inicio a fin
         cout<<(codificarLetra(arreglo[i])); //El valor retornado de la funcion que codificara el caracter actual o el mismo valor en caso de no haber uno
     return 0;   //Sera desplegado una vez la funcion haya devuelto el caracter
