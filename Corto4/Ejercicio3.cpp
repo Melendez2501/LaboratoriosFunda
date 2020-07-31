@@ -33,7 +33,7 @@ void llenarMatriz(float matriz[][5], int cantidad){
 }
 //Creamos la funcion para calcular la nota final de los estudiantes y desplegar si aprobaron o no
 void notaFinal(float matriz[][5], int cantidad){    //Pedimos como argumento
-    float final;    //Declaramos una variable donde calcularemos la nota final de cada estudiante
+    float final = 0;    //Declaramos una variable donde calcularemos la nota final de cada estudiante
     for (int alumno = 0; alumno < cantidad; alumno++)   //Hacemos dos lazos para recorrer la matriz
     {
         for (int calificacion = 0; calificacion < 5; calificacion++)
